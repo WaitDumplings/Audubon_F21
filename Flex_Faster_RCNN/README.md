@@ -16,8 +16,12 @@
   ├── backbone: extract feature maps (we provide classical backbone and feature pyramid backbone)
   ├── network_files: Faster R-CNN network（including Fast R-CNN module and RPN module and etc）
   ├── train_utils: modules for training and testing（including cocotools）
-  ├── convert_XML: get corresponding annotation xml files from a csv.file
   ├── helper: includes Customized data sets, plot bounding boxes, confusion matrix and other auxiliary functions
+      ├── Extract_and_Convert.py: get corresponding annotation xml files from a csv.file
+      ├── Confusion_Matrix.py: get confucion matrix for predicted value and true label
+      ├── draw_box_utils.py: draw bounding boxes for each target
+      ├── my_dataset for bird.py: customized dataset for birds images
+      ├── transforms.py: data transform for input
   ├── train_mobilenet.py: Use MobileNetV2 as the backbone for training
   ├── train_resnet50_fpn.py: Use resnet50+FPN as the backbone for training
   ├── predict.py: Simple prediction script for prediction testing using trained weights
@@ -46,3 +50,17 @@
 
 ## Faster RCNN framework
 ![Faster R-CNN](fasterRCNN.png) 
+
+## How to use
+* if the annnotation format is not xml file, use Extract_and_Convert_XML.py to convert a csv to xml file. (set file path)
+  ├── root
+    ├── Annotation (all csv files should be here)
+    
+* use split_data.py to split all images into training and validation (default train/test ratio = 9:1) (set file path)
+* change file path(txt_path), json_file path in my_dataset_for_bird.py (you can check the result by uncomment the last few lines)
+* if you choose resnet50 + FPN, use train_rest50_fpn.py (take PASCAL VOC 2012 as an example)
+  ├── root
+    ├── VOCdevkit
+      ├── VOC2012
+        ├── JPEGImages (images)
+        ├── Annotations (annotations)
