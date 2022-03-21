@@ -20,7 +20,8 @@
       ├── Extract_and_Convert.py: get corresponding annotation xml files from a csv.file
       ├── Confusion_Matrix.py: get confucion matrix for predicted value and true label
       ├── draw_box_utils.py: draw bounding boxes for each target
-      ├── my_dataset for bird.py: customized dataset for birds images
+      ├── my_dataset_for_birds.py: customized dataset for birds images
+      ├── my_dataset.py: customized dataset for PASCAL VOC dataset
       ├── transforms.py: data transform for input
   ├── train_mobilenet.py: Use MobileNetV2 as the backbone for training
   ├── train_resnet50_fpn.py: Use resnet50+FPN as the backbone for training
