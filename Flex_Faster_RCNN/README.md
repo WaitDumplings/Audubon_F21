@@ -54,14 +54,18 @@
 
 ## Train your own dataset
 * if the annnotation format is not xml file, use Extract_and_Convert_XML.py to convert a csv to xml file. (set file path)
+```
   ├── root
     ├── Annotation (all csv files should be here)
+```
     
 * use split_data.py to split all images into training and validation (default train/test ratio = 9:1) (set file path)
 * change file path(txt_path), json_file path in my_dataset_for_bird.py (you can check the result by uncomment the last few lines)
 * if you choose resnet50 + FPN, use train_rest50_fpn.py (take PASCAL VOC 2012 as an example)
+```
   ├── root
     ├── VOCdevkit
       ├── VOC2012
         ├── JPEGImages (images)
         ├── Annotations (annotations)
+```
