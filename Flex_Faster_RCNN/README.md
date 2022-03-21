@@ -32,12 +32,12 @@
 ## backbones pretrained weights（put them to backbone file）：
 * MobileNetV2 backbone: https://download.pytorch.org/models/mobilenet_v2-b0353104.pth
 * ResNet50+FPN backbone: https://download.pytorch.org/models/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth
-* Or we can use torchvision.models.(vgg16/resnet50, .... with pretrained = True) as the new backbone
+* Or we can use torchvision.models.(vgg16/resnet50, .... with pretrained = True) as the new backbone (need some minor revisions with train_mobilenet.py)
  
 ## training set for fast R-CNN: PASCAL VOC2012 dataset
 * Pascal VOC2012 train/val path：http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar
 
-## Training methods
+## Training guide
 * Ensure that the data set is prepared in advance
 * Ensure that the corresponding pre-trained model weights are downloaded in advance
 * To train mobilenetv2+fasterrcnn, use the train_mobilenet.py training script directly
@@ -52,7 +52,7 @@
 ## Faster RCNN framework
 ![Faster R-CNN](fasterRCNN.png) 
 
-## How to use
+## Train your own dataset
 * if the annnotation format is not xml file, use Extract_and_Convert_XML.py to convert a csv to xml file. (set file path)
   ├── root
     ├── Annotation (all csv files should be here)
