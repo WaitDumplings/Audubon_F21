@@ -13,7 +13,7 @@
 
 ## Project Organization：
 ```
-  ├── backbone: extract feature maps (we provide classical backbone and feature pyramid backbone)
+  ├── **backbone**: extract feature maps (we provide classical backbone and feature pyramid backbone)
   ├── network_files: Faster R-CNN network（including Fast R-CNN module and RPN module and etc）
   ├── train_utils: modules for training and testing（including cocotools）
   ├── helper: includes Customized data sets, plot bounding boxes, confusion matrix and other auxiliary functions
